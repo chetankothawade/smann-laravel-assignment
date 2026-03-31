@@ -21,16 +21,16 @@ class ShipmentFactory extends Factory
      */
     public function definition(): array
     {
-        $status = fake()->randomElement(ShipmentStatus::cases());
-        $shipmentDate = fake()->dateTimeBetween('-30 days', 'now');
+        $status = $this->faker->randomElement(ShipmentStatus::cases());
+        $shipmentDate = $this->faker->dateTimeBetween('-30 days', 'now');
 
         return [
-            'tracking_number' => 'TRK-'.Str::upper(fake()->unique()->bothify('??#####')),
-            'sender_name' => fake()->name(),
-            'sender_address' => fake()->address(),
-            'receiver_name' => fake()->name(),
-            'receiver_address' => fake()->address(),
-            'destination_city' => fake()->city(),
+            'tracking_number' => 'TRK-' . Str::upper($this->faker->unique()->bothify('??#####')),
+            'sender_name' => $this->faker->name(),
+            'sender_address' => $this->faker->address(),
+            'receiver_name' => $this->faker->name(),
+            'receiver_address' => $this->faker->address(),
+            'destination_city' => $this->faker->city(),
             'status' => $status,
             'shipment_date' => $shipmentDate,
             'created_at' => $shipmentDate,

@@ -23,9 +23,9 @@ class StatusLogFactory extends Factory
     {
         return [
             'shipment_id' => Shipment::factory(),
-            'status' => fake()->randomElement(ShipmentStatus::cases()),
-            'location' => fake()->city(),
-            'created_at' => fake()->dateTimeBetween('-30 days', 'now'),
+            'status' => $this->faker->randomElement(ShipmentStatus::cases()),
+            'location' => $this->faker->city(),
+            'created_at' => $this->faker->dateTimeBetween('-30 days', 'now'),
         ];
     }
 }

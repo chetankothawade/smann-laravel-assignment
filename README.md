@@ -64,6 +64,10 @@ Visit `http://localhost:8000/shipments`.
 php artisan test
 ```
 
+## Demo Data
+The application includes seeders to generate sample shipment and status logs data.
+
+
 ## Architecture Notes
 
 - `ShipmentStatus` enum centralizes valid shipment states and badge presentation.

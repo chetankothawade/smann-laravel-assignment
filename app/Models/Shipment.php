@@ -4,7 +4,6 @@ namespace App\Models;
 
 use App\Enums\ShipmentStatus;
 use Database\Factories\ShipmentFactory;
-use Illuminate\Database\Eloquent\Attributes\Cast;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -40,7 +39,6 @@ class Shipment extends Model
         return $query->where('tracking_number', 'like', '%'.$trackingNumber.'%');
     }
 
-    #[Cast]
     protected function casts(): array
     {
         return [

@@ -4,7 +4,6 @@ namespace App\Models;
 
 use App\Enums\ShipmentStatus;
 use Database\Factories\StatusLogFactory;
-use Illuminate\Database\Eloquent\Attributes\Cast;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -28,7 +27,6 @@ class StatusLog extends Model
         return $this->belongsTo(Shipment::class);
     }
 
-    #[Cast]
     protected function casts(): array
     {
         return [

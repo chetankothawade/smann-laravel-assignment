@@ -40,7 +40,7 @@
             <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
                 <div>
                     <h1 class="h3 fw-bold mb-1">Shipment Tracking</h1>
-                    <p class="mb-0 text-muted">Laravel Assessment</p>
+                    <p class="mb-0 text-muted">Laravel Assessment BY Chetan Kothawade</p>
                 </div>
                 <nav>
                     <a href="{{ route('shipments.index') }}" class="btn btn-outline-primary fw-semibold">
